@@ -36,7 +36,7 @@ def model_personalitytraits(df1,txt):
     model.add(Dense(4, activation='softmax'))
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    model.load_weights(r"C:\Users\RJ Lingesh\Downloads\LSTM\model.h5")
+    model.load_weights(os.getcwd()+r'/model.h5')
     print(type(txt))
     tweet = [txt]
 
